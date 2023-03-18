@@ -3,7 +3,9 @@ import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { Container, Nav, Navbar, NavDropdown } from "react-bootstrap";
 import { LinkContainer } from "react-router-bootstrap";
+
 import { logout } from "../store/actions/userActions";
+import SearchBox from "./SearchBox";
 
 const Header = () => {
   const dispatch = useDispatch();
@@ -23,6 +25,7 @@ const Header = () => {
             <Navbar.Brand>Nexus</Navbar.Brand>
           </LinkContainer>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
+          <SearchBox />
           <Navbar.Collapse
             id="basic-navbar-nav"
             className="justify-content-end"
